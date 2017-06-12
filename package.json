@@ -1,0 +1,21 @@
+{
+  "name": "beam",
+  "version": "1.0.0",
+  "description": "load collimate output into a Frame",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "columnar",
+    "data-science",
+    "data"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "arrayloader": "^1.1.2",
+    "async": "^2.4.1",
+    "floader": "^1.0.1"
+  }
+}
