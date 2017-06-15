@@ -1,6 +1,4 @@
-var path = require('path'),
-	fs = require('fs'), // node (server) only
-	loader = require('arrayloader'); // command-line/browser cross platform file loader
+var loader = require('arrayloader'); // command-line/browser cross platform file loader
 
 exports.load = load = function load(dir, index, callback){
 
@@ -51,20 +49,24 @@ exports.load = load = function load(dir, index, callback){
  look for index.json
  load the columns described therein
 */
-exports.discover = function read(dir, callback){
+exports.read = function read(dir, callback){
 	if(!dir.endsWith("/")) dir += "/";
 
 	var file = "index.json";
 	loader.load(dir + file, function(err, index){
 		if(err) return callback(err);
 
-		return load(index, callback);
+		return load(dir, index, callback);
 	});
 }
 
 // build an index from a directory listing
 // from initial version (kept for later reuse)
 // node (server) only
+/*
+var path = require('path'),
+	fs = require('fs'), // node (server) only
+
 exports.build_index = function build_index(dir){
 	//var dir = path.dirname(pname) + "/";
 	if(!dir.endsWith("/")) dir += "/";
@@ -88,3 +90,4 @@ exports.build_index = function build_index(dir){
 
 	return index;
 }
+*/
