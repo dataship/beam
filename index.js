@@ -43,7 +43,7 @@ exports.load = load = function load(dir, index, callback){
 		if(keys == null) return callback(null, {"columns" : columns});
 		else return callback(null, {"columns" : columns, "keys" : keys});
 	});
-}
+};
 
 /*
  look for index.json
@@ -58,7 +58,7 @@ exports.read = function read(dir, callback){
 
 		return load(dir, index, callback);
 	});
-}
+};
 
 // build an index from a directory listing
 // from initial version (kept for later reuse)
