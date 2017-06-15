@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "mkdir -p dist && browserify index.js -s beam > dist/beam.js"
+    "dist": "mkdir -p dist && browserify lib/beam.js -s beam > dist/beam.js"
   },
+  "main": "lib/index.js",
+  "browser": "lib/beam.js",
   "keywords": [
     "columnar",
     "data-science",
