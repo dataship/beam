@@ -1,6 +1,6 @@
 {
   "name": "beam",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "load collimate output into a Frame",
   "main": "index.js",
   "scripts": {
