@@ -7,8 +7,8 @@ First, create a data set with [collimate](https://github.com/dataship/collimate)
 
 
 ```javascript
-var beam = require('beam'),
-	Frame = require('frame');
+var beam = require('dataship-beam'),
+	Frame = require('dataship-frame');
 
 beam.read("path/to/data/set/", function(err, data){
 
