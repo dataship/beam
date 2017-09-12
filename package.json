@@ -2,16 +2,15 @@
   "name": "dataship-beam",
   "version": "1.2.2",
   "description": "load collimate output into a Frame",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
-      "type": "git",
-      "url": "git://github.com/dataship/beam.git"
+    "type": "git",
+    "url": "git://github.com/dataship/beam.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "browserify test/test.js | testling -x xdg-open",
     "dist": "mkdir -p dist && browserify lib/beam.js -s beam > dist/beam.js"
   },
-  "main": "lib/index.js",
   "browser": "lib/beam.js",
   "keywords": [
     "columnar",
@@ -21,6 +20,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "arrayloader": "^3.1.0"
+    "arrayloader": "^4.0.0"
+  },
+  "devDependencies": {
+    "tape": "^4.8.0"
   }
 }
