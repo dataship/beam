@@ -115,3 +115,49 @@ tape("keys have correct values", function(t){
 		t.equal(ionic_k[3], "base", "key values correct");
 	});
 });
+
+var http_index = {
+	"doric" : "doric",
+	"tuscan" : "tuscan",
+	"ionic" : "ionic",
+	"corinthian" : "corinthian"
+};
+
+var url = "http://localhost:8080/data/";
+
+tape("http float32 column has correct values", function(t){
+	t.plan(3);
+
+	beam.load(url, http_index, function(err, results){
+
+		if(err){
+			t.fail(err.message);
+			return;
+		}
+
+		var doric = results.columns["doric"];
+
+		t.assert(close(doric[0], 3.14159), "values correct");
+		t.assert(close(doric[23], 1.0101010), "values correct");
+		t.assert(close(doric[78], 2.7182818), "values correct");
+
+	});
+});
+
+tape("http keys have correct values", function(t){
+	t.plan(4);
+
+	beam.load(url, http_index, function(err, results){
+
+		if(err){
+			t.fail(err.message);
+			return;
+		}
+
+		var ionic_k = results.keys["ionic"];
+		t.equal(ionic_k[0], "volute", "key values correct");
+		t.equal(ionic_k[1], "abacus", "key values correct");
+		t.equal(ionic_k[2], "shaft", "key values correct");
+		t.equal(ionic_k[3], "base", "key values correct");
+	});
+});

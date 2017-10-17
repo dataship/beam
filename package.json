@@ -23,6 +23,7 @@
     "arrayloader": "^4.0.0"
   },
   "devDependencies": {
+    "express": "^4.16.2",
     "tape": "^4.8.0"
   }
 }
