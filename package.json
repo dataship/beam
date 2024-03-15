@@ -1,6 +1,6 @@
 {
   "name": "dataship-beam",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "load collimate output into a Frame",
   "main": "lib/index.js",
   "repository": {
@@ -17,7 +17,7 @@
     "data-science",
     "data"
   ],
-  "author": "",
+  "author": "Waylon Flinn <waylonflinn@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "arrayloader": "^4.0.0"
@@ -25,5 +25,11 @@
   "devDependencies": {
     "express": "^4.16.2",
     "tape": "^4.8.0"
+  },
+  "optionalDependencies":{
+    "yargs" : "^3.32.0"
+  },
+  "bin": {
+      "beam" : "main.js"
   }
 }
