@@ -1,6 +1,6 @@
 {
   "name": "dataship-beam",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "load collimate output into a Frame",
   "main": "lib/index.js",
   "repository": {
