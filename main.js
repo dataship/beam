@@ -40,11 +40,8 @@ if(require.main === module){
 
 	var file = "index.json";
 	var index_path;
-	if(url.endsWith("/")){
-		index_path = url + file;
-	} else {
-		index_path = url +"/"+file;
-	} 
+	if(!url.endsWith("/")) url += "/";
+	index_path = url + file;
 	loader.load(index_path, function(err, index){
 		
 		handleError(err, "Couldn't load index from: " + url);
@@ -60,7 +57,7 @@ if(require.main === module){
 			const parsed_url = new URL(url);
 			var path_part = parsed_url.pathname;
 			var parts = path_part.split("/");
-			console.log(parts);
+			//console.log(parts);
 			var package_name = parts[parts.length-1];
 			if(package_name == "") package_name = parts[parts.length-2];
 			var package_dir = "./" + package_name;
@@ -77,6 +74,7 @@ if(require.main === module){
 
 					fs.writeFileSync(path.join(package_dir, filename), results.columns[name]);
 				}
+				console.log("Wrote files "+ Object.entries(index).length +" to '"+package_name+"' directory.");
 			} catch (err) {
 				console.error(err);
 			}
