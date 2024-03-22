@@ -14,6 +14,12 @@ For use as a library:
 
 This will exclude the argument parsing library for a smaller install.
 
+## command line usage
+
+`beam http://somedomain.com/data/somedataset/`
+
+where `somedataset` serves an `index.json` file in a suitable format.
+
 ## usage
 First, create a data set with [collimate](https://github.com/dataship/collimate).
 
