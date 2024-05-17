@@ -20,7 +20,7 @@
   "author": "Waylon Flinn <waylonflinn@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "arrayloader": "^4.0.0"
+    "arrayloader": "^5.1.0"
   },
   "devDependencies": {
     "express": "^4.16.2",
