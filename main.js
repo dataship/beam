@@ -74,7 +74,7 @@ if(require.main === module){
 
 					fs.writeFileSync(path.join(package_dir, filename), results.columns[name]);
 				}
-				console.log("Wrote files "+ Object.entries(index).length +" to '"+package_name+"' directory.");
+				console.log("Wrote "+ Object.entries(index).length +" files  to '"+package_name+"' directory.");
 			} catch (err) {
 				console.error(err);
 			}
